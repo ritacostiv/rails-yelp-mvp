@@ -13,3 +13,195 @@
  *= require_tree .
  *= require_self
  */
+
+ /* Modern Pastel Color Palette */
+/* Modern Pastel Color Scheme */
+/* Bold, High-Contrast Color Scheme */
+body {
+  font-family: 'Outfit', 'Helvetica Neue', sans-serif;
+  background-color: #111827;
+  color: #ffffff;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px;
+  background: linear-gradient(145deg, #1e293b, #111827);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-shadow: 0 2px 10px rgba(79, 70, 229, 0.4);
+  font-size: 2.2rem;
+  letter-spacing: -0.5px;
+}
+
+/* Restaurant cards */
+.restaurant-card {
+  background: linear-gradient(180deg, #1f2937 0%, #111827 100%);
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-left: 5px solid #ec4899;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.restaurant-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top right, rgba(236, 72, 153, 0.2), transparent 70%);
+  pointer-events: none;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 7px 30px rgba(236, 72, 153, 0.3);
+}
+
+.restaurant-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.restaurant-category {
+  display: inline-block;
+  padding: 5px 12px;
+  background-color: #4f46e5;
+  color: white;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+  box-shadow: 0 2px 10px rgba(79, 70, 229, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.restaurant-address {
+  color: #a5b4fc;
+  font-size: 0.95rem;
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(90deg, #4f46e5, #7c3aed);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  padding: 12px 24px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.6);
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #7c3aed, #4f46e5);
+  z-index: -1;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.btn-primary:hover::after {
+  opacity: 1;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid #a5b4fc;
+  border-radius: 6px;
+  color: #a5b4fc;
+  padding: 10px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(165, 180, 252, 0.1);
+  border-color: #a5b4fc;
+  color: #ffffff;
+}
+
+/* Simple form styling */
+.simple_form label {
+  font-weight: 600;
+  color: #a5b4fc;
+  margin-bottom: 8px;
+  display: block;
+  letter-spacing: 0.5px;
+}
+
+.simple_form input,
+.simple_form select {
+  background-color: #1f2937;
+  border: 2px solid #374151;
+  border-radius: 8px;
+  padding: 14px;
+  width: 100%;
+  margin-bottom: 20px;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.simple_form input:focus,
+.simple_form select:focus {
+  border-color: #4f46e5;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.25);
+  background-color: #272f3d;
+}
+
+.simple_form select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23a5b4fc' viewBox='0 0 16 16'%3E%3Cpath d='M8 10.5a.5.5 0 0 1-.354-.146l-4-4a.5.5 0 1 1 .708-.708L8 9.293l3.646-3.647a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.354.146z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 40px;
+}
+
+/* Form container */
+.form-container {
+  background: linear-gradient(145deg, #1e293b, #111827);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+}
